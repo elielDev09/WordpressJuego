@@ -1,0 +1,112 @@
+/* === FRONT PAGE === */
+
+.front-page {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2rem;
+  color: #fff;
+}
+
+/* TITULOS DE SECCIÓN */
+.titulo-seccion {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #ff66d9;
+  margin-bottom: 2rem;
+}
+
+/* CARD GENERAL */
+.card-sombra {
+  background: linear-gradient(145deg, #101010, #171717);
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(255, 0, 191, 0.25);
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* === JUEGOS === */
+.contenedor-juegos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.juego-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 260px;
+  transition: all 0.3s ease;
+}
+
+.juego-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255, 0, 191, 0.4);
+}
+
+.juego-card img {
+  width: 100%;
+  display: block;
+}
+
+.juego-info {
+  padding: 1rem;
+  color: #000;
+}
+
+.juego-precio {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.juego-titulo {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.juego-categoria {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 0.3rem;
+}
+
+/* === NOTICIAS === */
+.contenedor-noticias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.noticia-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.noticia-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255, 0, 191, 0.4);
+}
+
+.noticia-card img {
+  width: 100%;
+  display: block;
+}
+
+.noticia-titulo {
+  color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contenedor-juegos {
+    flex-direction: column;
+    align-items: center;
+  }
+}

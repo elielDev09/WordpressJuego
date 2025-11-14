@@ -1,0 +1,95 @@
+/* === CONSOLA === */
+.consola-container {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2rem;
+  color: #fff;
+}
+
+.titulo-principal h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.subtitulo {
+  font-size: 1.8rem;
+  color: #b9b9ff;
+  margin-bottom: 2rem;
+}
+
+.versiones-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.version-card {
+  background: linear-gradient(180deg, #14151B 0%, #1A1D25 100%);
+  box-shadow: 0 0 15px rgba(248, 96, 210, 0.2);
+  border-radius: 15px;
+  padding: 1.5rem 2rem;
+  width: 360px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.version-card:hover {
+  transform: translateY(-5px);
+}
+
+.version-card h3 {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  color: #fff;
+}
+
+.version-card img {
+  display: block;
+  height: 120px;
+  margin: 0 auto 1rem;
+  object-fit: contain;
+}
+
+.version-card ul {
+  list-style: none;
+  color: #cfcfcf;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding: 0;
+}
+
+.version-card li strong {
+  color: #fff;
+}
+
+.version-card .arrow {
+  position: absolute;
+  right: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+  color: #B7B5FF;
+}
+
+.consola-imagen img {
+  width: 400px;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 0 10px rgba(248, 96, 210, 0.2));
+  transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.consola-imagen img:hover {
+  transform: scale(1.03);
+  filter: drop-shadow(0 0 20px rgba(248, 96, 210, 0.4));
+}
+
+#nextBtn:hover {
+  cursor: pointer;
+  color: #F860D2
+}

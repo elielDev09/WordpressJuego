@@ -1,0 +1,105 @@
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 2rem;
+  background-color: #101010;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-container img {
+  height: 45px;
+  width: auto;
+}
+
+.site-title a {
+  color: #F860D2;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.site-nav a:hover {
+  color: #ff33cc;
+}
+
+.site-nav .current-menu-item a {
+  color: #ff33cc;
+}
+
+/* === MENÚ HAMBURGUESA RESPONSIVE === */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* === MODO MÓVIL === */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* MENÚ LATERAL COMPACTO */
+  .site-nav {
+    position: fixed;
+    top: 70px; 
+    right: -200px; 
+    width: 200px; 
+    height: auto; 
+    background-color: #101010;
+    padding: 15px 0;
+    border-radius: 0 0 0 10px; 
+    box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.4);
+    transition: right 0.3s ease-out;
+    z-index: 999;
+  }
+
+  .site-nav.active {
+    right: 0;
+  }
+
+  .site-nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+    padding-left: 20px;
+    margin: 0;
+  }
+
+  .site-nav ul li a {
+    font-size: 1.1rem;
+  }
+
+  .site-header {
+    position: relative;
+  }
+}
+
+  .menu-toggle:hover i {
+    color: #F860D2;
+  }

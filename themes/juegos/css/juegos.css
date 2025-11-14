@@ -1,0 +1,130 @@
+/* === ARCHIVE: VIDEOJUEGOS === */
+/* === FILTRO DE CATEGORÍAS === */
+.filtro-categorias {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.filtro-categorias label {
+  font-weight: 600;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.filtro-categorias select {
+  background-color: #1a1a1a;
+  color: #fff;
+  border: 1px solid #ff00bf;
+  border-radius: 6px;
+  padding: 0.4rem 1rem;
+  font-size: 0.95rem;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.filtro-categorias select:hover,
+.filtro-categorias select:focus {
+  border-color: #ff66d9;
+}
+
+.videojuegos-container {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2rem;
+}
+
+/* Grid fijo de 5 columnas */
+.videojuegos-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* exactamente 5 columnas */
+  gap: 1.2rem;
+  justify-items: center; /* centra las cards dentro de su celda */
+  justify-content: center; /* centra el grid si hay menos de 5 */
+}
+
+/* === CARD === */
+.videojuego-card {
+  width: 180px; /* tamaño fijo */
+  background: #ece6e8;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+  text-align: center;
+  padding-bottom: 0.6rem;
+}
+
+/* Efecto hover */
+.videojuego-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgb(255, 0, 191);
+}
+
+/* Imagen del videojuego */
+.videojuego-imagen {
+  width: 100%;
+  height: 200px; /* altura fija para todas */
+  object-fit: contain; /* que se vea entera */
+  display: block;
+  background-color: #ece6e8; /* mismo color que la card para disimular bordes */
+  border-radius: 12px 12px 0 0;
+  transition: transform 0.3s ease;
+  padding: 5px; /* pequeño margen interior para que no pegue arriba */
+  box-sizing: border-box; /* asegura que el padding no rompa el tamaño */
+}
+
+.videojuego-card:hover .videojuego-imagen {
+  transform: scale(1.03);
+}
+
+
+/* Título del videojuego */
+.videojuego-titulo {
+  font-size: 0.95rem;
+  color: #0a0a0a;
+  margin-top: 0.6rem;
+  padding: 0 0.5rem;
+  line-height: 1.2;
+}
+
+/* Enlace */
+.videojuego-enlace {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Mensaje si no hay juegos */
+.sin-juegos {
+  color: #ccc;
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.1rem;
+}
+
+/* === Responsive === */
+@media (max-width: 1024px) {
+  .videojuegos-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 por fila */
+  }
+}
+
+@media (max-width: 768px) {
+  .videojuegos-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 por fila en móvil */
+  }
+  .videojuego-card {
+    width: 150px;
+  }
+  .videojuego-imagen {
+    height: 130px;
+  }
+  .videojuego-titulo {
+    font-size: 0.9rem;
+  }
+}

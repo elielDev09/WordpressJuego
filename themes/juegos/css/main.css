@@ -1,0 +1,149 @@
+/* === MAIN.CSS === */
+/* Reset */
+* { margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+/* === GLOBAL === */
+html, body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: #fff;
+  background: linear-gradient(180deg, #0D0D0D 0%, #1B1F2A 100%);
+  background-attachment: fixed;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Contenido principal ocupa todo el espacio restante */
+main {
+  flex: 1;
+}
+
+/* === HEADER === */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 2rem;
+  background-color: #101010;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-container img {
+  height: 45px;
+  width: auto;
+}
+
+.site-title a {
+  color: #F860D2;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.site-nav a:hover {
+  color: #ff33cc;
+}
+
+/* === FOOTER === */
+.site-footer {
+  background-color: #101010;
+  color: #fff;
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid #111;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+
+.footer-left h3 {
+  margin-bottom: 1rem;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons a {
+  color: #F860D2;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff33cc;
+  transform: scale(1.2);
+}
+
+.footer-right {
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+.footer-right a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-right a:hover {
+  color: #F860D2;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .historia-container,
+  .versiones-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .historia-col,
+  .version-card {
+    width: 90%;
+  }
+
+  .site-nav ul {
+    gap: 2rem;
+  }
+
+  .titulo-principal h1 {
+    font-size: 3.5rem;
+  }
+}
